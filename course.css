@@ -1,0 +1,31 @@
+html body{ 
+    background: url('https://images.pexels.com/photos/3618162/pexels-photo-3618162.jpeg?cs=srgb&dl=pexels-lukas-rodriguez-3618162.jpg&fm=jpg') no-repeat center center fixed; 
+    
+  
+   
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+ }
+
+ #nav1
+{  
+    
+    opacity: 0.9; 
+    filter:(opacity=50);       
+}
+
+.tableOfMovies{
+   margin-top: 30vh;
+   opacity: 0.9;
+   text-align: center;
+}
+
+.firstTable{
+    margin-top: 10vh;
+   opacity: 0.9;
+   text-align: center;
+
+}
+

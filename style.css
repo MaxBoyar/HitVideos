@@ -1,0 +1,38 @@
+html body{ 
+    background: url('https://images.pexels.com/photos/3618162/pexels-photo-3618162.jpeg?cs=srgb&dl=pexels-lukas-rodriguez-3618162.jpg&fm=jpg') no-repeat center center fixed; 
+    
+  
+   
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+ }
+
+ #nav1
+{  
+    
+    opacity: 0.9; 
+    filter:(opacity=50);       
+}
+
+ .welcome{
+    
+     /* background: radial-gradient(circle, rgba(255,255,255,0.7) 10%, rgba(255,255,255,0) 100%, rgba(0,0,05,1) 100%);
+      */
+     margin-top: 15%;
+     padding-top: 15vh;
+     padding-bottom: 15vh;
+   
+ }
+
+ .welcome h1 {
+   color: white;
+   font-size: 9vh;
+ }
+
+ .welcome h5 {
+    color: white;
+    
+  }
+

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+
+    
+    <link rel="stylesheet" href="course.css">
+
+    <title>Document</title>
+</head>
+<body dir="rtl">
+
+
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav1" >
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup" >
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="index.html">דף הבית <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="movies.html">אינדקס סרטונים</a>
+            
+          </div>
+        </div>
+      </nav>
+
+
+
+
+    <div class="container">
+        
+        
+        <table class="table firstTable table-bordered table-responsive-md  table-dark">
+            
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>תוכן</th>
+                <th>קישור</th>
+                <th>נושאים</th>
+                <th>תאריך</th>
+                
+                
+              </tr>
+            </thead>
+          
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+<div class="container">
+    
+    
+    
+    <div class="card">
+        <div class="card-body">
+          <h5 style="text-align: center;">תגבורים</h5>
+        </div>
+    </div>
+    <table class="table secondTable table-bordered table-responsive-md btn-table table-dark" id="nav1">
+
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>תוכן</th>
+            <th>קישור</th>
+            <th>נושאים</th>
+            <th>תאריך</th>
+            
+            
+          </tr>
+        </thead>
+      
+        <tbody>
+        </tbody>
+    </table>
+
+</div>
+    <
+   
+ 
+<script>
+     var dataJson = [
+        {
+            'content':'הרצאה-1',
+            'link':'https://zoom.us/rec/play/vZwqfu-rpjg3T9SRsQSDBqcsW9XveKKs2nQcrPsNyki2BiYCNgCiNeESauNWJiTE5vVOl6P0jZ7yxjMI',
+            'comment':'מבוא חלק א',
+            'date':'10.7.20'
+        },
+        {
+            'content':'הרצאה-1',
+            'link':'https://zoom.us/rec/play/ucAkcu3-pz83T4eWtASDAP8oW9S8Lv-s1nQb-voFmBuzVCYHO1ekYLUUZ7EjHqKG1Txfq-VIw6Wezcfq',
+            'comment':'מבוא חלק ב',
+            'date':'10.7.20'
+        },
+        {
+            'content':'הרצאה-2',
+            'link':'https://zoom.us/rec/play/tJclI-yuqjM3Ht2T4gSDAPV-W9W9LKKsgylIrqILxRuwBSFXMQalYboVarRlbr4bDGac-jkqcW1FylSw',
+            'comment':'אלגברה בוליאנית/הסתברות מותנית',
+            'date':'17.7.20'
+        },
+        {
+            'content':'הרצאה-2-תרגול',
+            'link':'https://zoom.us/rec/play/vpQlIeis_Wk3SICQsQSDCqB4W464ff2sgydP-PVfmkq0VXQHMwenMroRarRwYDW8wzC5pt5YT0YXTzF_',
+            'comment':'',
+            'date':'17.7.20'
+        },
+        {
+            'content':'הרצאה-2-השלמה',
+            'link':'https://zoom.us/rec/play/uJF-fuGupz83GdKX5ASDV_QtW9TrJ_2s0yVKqPMJmh2zUSFXZlOmYLcWYecYTSMBeZmIRr2KNeXDlc9t',
+            'comment':'',
+            'date':'22.7.20'
+        },
+        {
+            'content':'הרצאה-3',
+            'link':'https://zoom.us/rec/play/vMJ7cruh_D83G4KWsQSDU6J7W9TrfP-s0Ccer6cOxEi1B3UGM1KlYLcSZ1linFyxfY6ujH6JuPLJFuk',
+            'comment':'הסתברות שלמה/משפט בייס/מעגלים חשמליים/תחילת קומבינטוריקה עקרון הכפל',
+            'date':'24.07.20'
+        },
+        {
+            'content':'הרצאה-3-תרגול',
+            'link':'https://zoom.us/rec/play/7JJ5drqgrjI3GYeTuASDUKN8W9W-fa6shCUW-aAIzhrhUnBVYAalZLsWNuIVZ_nM1bzUZGeau6Q4KfbL',
+            'comment':'קומבינטוריקה ',
+            'date':'24.07.20'
+        },
+        {
+            'content':'הרצאה-4',
+            'link':'https://zoom.us/rec/play/65Yvdb2s_W83T4KRswSDBqIsW466KvqsgydL_vYMnRy8WnAENlDyYORBZLCt47RG6sHpA-YYT7ZlGTG4',
+            'comment':'',
+            'date':'31.07.20'
+        },
+        {
+            'content':'הרצאה-4-תרגול',
+            'link':'https://zoom.us/rec/play/v5AqJrqupzw3E4XH4QSDVvFwW9S1K_isgHBN_qBfzEnnUHZVYVf1MrVBN-HBZ096ZB3oOwxlQmmjOlOx',
+            'comment':'',
+            'date':'31.07.20'
+        },
+        {
+            'content':'הרצאה-5',
+            'link':'https://zoom.us/rec/play/7MUldrj5_243SIXA4QSDU6d8W9TuePqs23Ad_vBbyRm8ViFXYwCgNbEbYOUJc_9-Vl9ydOzqdKv1L0M8',
+            'comment':'ממ מקרי בדיד חד מימדי,פונקציית הסתברות,פונקציית התפלגות מצטברת,מדדים:תוחלת שונות,סטיית תקן',
+            'date':'07/08/20'
+        },
+        {
+            'content':'הרצאה-5-תרגול',
+            'link':'https://zoom.us/rec/play/6MUpc7-v_W43HdSWsQSDBvN9W9S6KfishnUbr_EKnkjmB3MCYFP3ZuFGYLQxwvBHaiAssM-womTbZ19-',
+            'comment':'',
+            'date':'07/08/20'
+        },
+        {
+            'content':'הרצאה-6',
+            'link':'https://zoom.us/rec/play/6ZQqc-z6qjw3S9XEsgSDB6QqW9W7LqKs2yga-_IOyEm3VXYDOwCnYrMUNrFU8NZRQvpm23Up1iFY_DUQ',
+            'comment':'התפלגויות בדידות מיוחדות : אחידה,ברנולי,בינומי',
+            'date':'14/08/20'
+        },
+        {
+            'content':'הרצאה-6-תרגול',
+            'link':'https://zoom.us/rec/play/tcB4JLv9rD03TtSTtASDBfUsW425La6s23NP-qYFmUe3ACQHYFehMuARZ7R_R-BnBjUsQYqTGQJRZXVw',
+            'comment':'',
+            'date':'14/08/20'
+        },
+        {
+            'content':'הרצאה-7',
+            'link':'https://zoom.us/rec/play/vJ0qIe6r_2o3SN2X5QSDUKUoW9S6fa-s0iRMqfRfzBrkUyIHZlGgZLBHZbdJ4VENTSqSsuWeg3_apTPu',
+            'comment':'',
+            'date':'21/08/20'
+        },
+         {
+            'content':'הרצאה-7-תרגול',
+            'link':'https://zoom.us/rec/play/tcAld-yg_zk3G4eV5gSDAadxW9S4eq2s2ydM-6VYxE-3BnlSNVKnYONGMOY2yeHW3YKOvpYhK_yN1E3t',
+            'comment':'',
+            'date':'21/08/20'
+        },
+       {
+            'content':'הרצאה 8 + תרגול',
+            'link':'https://zoom.us/rec/play/78B_cu6o_zs3GYaQtASDBPB-W9W8f6-s0yMXr_sKxR6xByVWYAfwNbsUNxMWRagnV_NU6GTh2UUEizc',
+            'comment':'',
+            'date':'28/08/20'
+        },
+      {
+            'content':'הרצאה 9 ',
+            'link':'https://zoom.us/rec/play/n5er_csBq7rFUATMhYLy6XmtPvFlDEdrt8-2p_h1cZmfbA6ZxAi7O4ulL2qEhcivECR_M_xzSB_rboNx.Y7r7ohpoPIfNeiDH',
+            'comment':'',
+            'date':'04/09/20'
+        },
+      {
+            'content':'הרצאה-9-תרגול',
+            'link':'https://zoom.us/rec/play/C9GIvjKlbkY4sfg6JQVNkkQpByeCzGdA0CDEgr_boKAR201ichiZtt2o0LXb2AciSw2rzi6VcPma7efR.9usb3zIrGmp6a9zY',
+            'comment':'',
+            'date':'04/09/20'
+        },
+        {
+            'content':'הרצאה 10',
+            'link':'https://zoom.us/rec/play/BUm8Sy_kbLdrUFXQ0lNY1PBwCLAE4L30JbIHUpZacN_WpwTH-YSlJDD6L2zobZbASjdc9vLUAyiQrSL3.l9kPqOUwBvhY7EI4',
+            'comment':'',
+            'date':'11/09/20'
+        },
+      {
+            'content':'הרצאה 10 תרגול',
+            'link':'https://zoom.us/rec/play/zbybFU0LyrUlnoLdjkSJcKWD3dh8HP-au-sco8uGNde8eBFbLPt1y3ukbbSJ9Gl9V7lDK4H22wO5BAho.PAmIxUh0OB7gRLqN',
+            'comment':'',
+            'date':'11/09/20'
+        },
+      {
+            'content':'הרצאה 11 (שעתיים הרצאה)',
+            'link':'https://zoom.us/rec/play/2_RSz5w0M0RsZXfhnEhw-pyn5pl0BVqaWDzCKTSFtiYkMXydrFVQiTYBdo04HsiC5ehzrf6-OB8qaND0.O6CHmA4iBCmMq4rQ',
+            'comment':'הרצאה אחרונה כביכול',
+            'date':'13/09/20'
+        },
+      
+      
+   
+        
+    ]
+
+    var dataJsonTigbur = [
+      {
+            'content':'תגבור-1',
+            'link':'https://zoom.us/rec/play/7pArdLz7rj03TN2VswSDVvEsW9W9LP-s1HQZ-vBZzBvjU3EFM1T3M7YUZefnPrmrwi5Yt71UuxlV2q9y',
+            'comment':'תגבור עם פרופ: יוגין',
+            'date':'23/07/20'
+      },
+      {
+            'content':'תגבור-2',
+            'link':'https://zoom.us/rec/play/68Ilc-v6_T43GdHBswSDUP95W46_fKishCIc8_ANnUm9W3MKMQL0YLJGNufobnc6SuCCgOvQz3qIvYw0?continueMode=true&_x_zm_rtaid=4dA8jk4-TYOG04UUDXnwXw.1597399025037.1c1dcd1229652243cb4375fded7f7e71&_x_zm_rhtaid=434',
+            'comment':'תגבור עם פרופ: יוגין',
+            'date':'-'
+      },
+      {
+            'content':'תגבור-3',
+            'link':'https://zoom.us/rec/play/78F-c-j7_TI3GtaQtQSDAvF9W468KPqs0nRN-6ZfzE3kW3MBZlLwZbQWa-KFRXxD47SSNOH--SCvJk8s?startTime=1597319636000&_x_zm_rtaid=4dA8jk4-TYOG04UUDXnwXw.1597399025037.1c1dcd1229652243cb4375fded7f7e71&_x_zm_rhtaid=434',
+            'comment':'תגבור עם פרופ: יוגין',
+            'date':'13/08/20'
+      },
+      {
+            'content':'תגבור-4',
+            'link':'https://zoom.us/rec/play/7sUuc7_-rzI3GdOSuASDCvd7W43oKqqs1ndMrKYPyEjjW3kDMVvzN7cXZOejOM3zQc8qQpOryu_0_JdA?startTime=1597923773000&_x_zm_rtaid=35jxB7fgQP6-cxSpY-fWTA.1598532997280.0f761b17b49087fd0c7d2be73b535756&_x_zm_rhtaid=96',
+            'comment':'תגבור עם פרופ: יוגין',
+            'date':'20/08/20'
+      },
+       {
+            'content':'תגבור-5',
+            'link':'https://zoom.us/rec/play/6MJ7dur8_T83GoCQ5QSDAvV-W47sK66s1XAZ_PEPyhznWyMCNwHwb-ZGMOev_NYLBjk60T98fzs5TZHt?startTime=1598529291000&_x_zm_rtaid=35jxB7fgQP6-cxSpY-fWTA.1598532997280.0f761b17b49087fd0c7d2be73b535756&_x_zm_rhtaid=96',
+            'comment':'תגבור עם פרופ: יוגין',
+            'date':'-'
+      },
+       {
+            'content':'תגבור-6',
+            'link':'https://zoom.us/rec/play/uJwuIr-vp203S4KUsgSDAKNwW420J62s0CIerqFYykawBiIKZFOkbuEVauVulb8NxX-7Co9hTUfU1_Kk?continueMode=true&_x_zm_rtaid=xICUDqMIRA-xHv_XtZIyyg.1598685649182.c19e33184c8a63d5041c4957dd87325a&_x_zm_rhtaid=961',
+            'comment':'תגבור עם פרופ: יוגין',
+            'date':'28/08/20'
+      },
+       {
+            'content':'תגבור-7',
+            'link':'https://zoom.us/rec/play/Hzvbp_xS4x07VswhWZfcitvNmvq3ZNDtWFkj-Po1bsKHWQ8vgxQw0yy-g2BPZd-Ib40b3GZ6M7iPILgB.sx0PbUdM9XeHgyij?continueMode=true&_x_zm_rtaid=rVzIl3o4QLaLxSMqWn2MdQ.1599174981429.bf177ee1b9102dcc402fbc225c129682&_x_zm_rhtaid=843',
+            'comment':'תגבור עם פרופ: יוגין',
+            'date':''
+      },
+      {
+            'content':'תגבור-8',
+            'link':'https://zoom.us/rec/play/h1qaHCgFIfa0lMbfb03eStIZnog7-zSm7SfVH8mCGtk9kvZ6CmfGYvbUVJ8_aK2emR8rIHyQFqJSCGW8.HDwFW4_e6033SnG4?continueMode=true&_x_zm_rtaid=hNnBtg6zTfSj2k0BdHXTXQ.1599174981585.bc4d12949053c4a92910a62f00812887&_x_zm_rhtaid=394',
+            'comment':'תגבור עם פרופ: יוגין',
+            'date':''
+      },
+      
+    
+    ]
+    
+        buildTable(dataJson,'.firstTable');
+        buildTable(dataJsonTigbur,'.secondTable');
+    
+    
+  
+    function buildTable(data,att){
+        var table= document.querySelector(att)
+        var counter=1;
+        for(var i=0;i<data.length;i++){
+            console.log(data[0].conetnt)
+            var row=`<tr>
+                        <th scope="row">${counter}</th>
+                        <td>${data[i].content}</td>
+                        <td>
+                            <a href="${data[i].link}"><button class="btn btn-info">Link</button></a>
+                        </td>
+                        <td>${data[i].comment}</td>
+                        <td>${data[i].date}</td>
+
+                    </tr>`
+            table.innerHTML += row
+            counter++;
+        }
+        
+    };
+
+</script>
+</body>
+    
+</html>
