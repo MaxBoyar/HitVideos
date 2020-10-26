@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        
+
+    
+
+    
+    <link rel="stylesheet" href="course.css">
+
+    <title>Document</title>
+</head>
+<body dir="rtl">
+
+
+   
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark" id="nav1">
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup" >
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="index.html" style="float:right">דף הבית <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="../index.html#courses" tyle="float:right">אינדקס סרטונים</a>
+            
+          </div>
+        </div>
+      </nav>
+      
+  
+      <div class="container">
+        <div class="row text-center  justify-content-md-center">
+          <div class="col">
+            <h1 class="text-center mt-5 name" style="color: azure;">תכנות בסביבת אינטרנט</h1>
+                <a class="btn btn-light btn-lg " href="../index.html#courses">חזרה לקורסים</a>
+                
+          </div>
+        </div>
+      </div>    
+        
+     
+    <div class="container">
+        
+        
+        
+        
+        <table class="table firstTable table-bordered table-responsive-md  table-dark">
+            
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>תוכן</th>
+                <th>קישור</th>
+                <th>נושאים</th>
+                <th>תאריך</th>
+                
+                
+              </tr>
+            </thead>
+          
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+    
+   
+ 
+<script>
+     var dataJson = [
+        {
+            'content':'הרצאה-1',
+            'link':'https://us02web.zoom.us/rec/play/-7C7v2tGhaYh0V4bSax5acTTdppDCMiOkM-fHMuuHlclSFNS1MZ5u3sPZo38IO9e5WsJFFiuonrbtrHt.y66XIrSYd0Y5h4J3?continueMode=true&_x_zm_rtaid=i14LUKQrTj-pvMd-C1dIaQ.1603723991565.7161b22706f2e5bfc134327b40b16052&_x_zm_rhtaid=981',
+            'comment':'',
+            'date':'19.10.20'
+        },
+
+   
+        
+    ]
+
+  
+    
+        buildTable(dataJson,'.firstTable');
+        buildTable(dataJsonTigbur,'.secondTable');
+    
+    
+  
+    function buildTable(data,att){
+        var table= document.querySelector(att)
+        var counter=1;
+        for(var i=0;i<data.length;i++){
+            console.log(data[0].conetnt)
+            var row=`<tr>
+                        <th scope="row">${counter}</th>
+                        <td>${data[i].content}</td>
+                        <td>
+                            <a href="${data[i].link}" target="_blank"><button class="btn btn-info">Link</button></a>
+                        </td>
+                        <td>${data[i].comment}</td>
+                        <td>${data[i].date}</td>
+
+                    </tr>`
+            table.innerHTML += row
+            counter++;
+        }
+        
+    };
+
+</script>
+</body>
+    
+</html>
