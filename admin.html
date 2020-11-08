@@ -78,150 +78,168 @@
         <div class="home-wrap">
             <div class="inner-html" id="asd">
                <div class="container login_window">
-        <div class="d-flex justify-content-center h-100">
-            <div class="card"  style=" display: none;">
-                <div class="card-header">
-                    <h3 style="text-align: center;">התחברות לממשק ניהול</h3>
-                    <div class="d-flex justify-content-end social_icon">
-                        <span><i class="fab fa-facebook-square"></i></span>
-                        <span><i class="fab fa-google-plus-square"></i></span>
-                        <span><i class="fab fa-twitter-square"></i></span>
-                    </div>
-                </div>
-                <div class="card-body  animate__animated animate__fadeIn animate__slow	6s" >
-                    <form id="login-form">
-                        <div class="input-group form-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-user"></i></span>
-                            </div>
-                            <input type="text" class="form-control" id="user" placeholder="אימייל" style="text-align: center">
+                  <div class="component d-flex justify-content-center h-100">
+                      <div class="card"  style=" display: none;">
+                          <div class="card-header">
+                              <h3 style="text-align: center;">התחברות לממשק ניהול</h3>
+                              <div class="d-flex justify-content-end social_icon">
+                                  <span><i class="fab fa-facebook-square"></i></span>
+                                  <span><i class="fab fa-google-plus-square"></i></span>
+                                  <span><i class="fab fa-twitter-square"></i></span>
+                              </div>
+                          </div>
+                          <div class="card-body  animate__animated animate__fadeIn animate__slow	6s" >
+                              <form id="login-form">
+                                  <div class="input-group form-group">
+                                      <div class="input-group-prepend">
+                                          <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                      </div>
+                                      <input type="text" class="form-control" id="user" placeholder="אימייל" style="text-align: center">
+                                      
+                                  </div>
+                                  <div class="input-group form-group">
+                                      <div class="input-group-prepend">
+                                          <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                      </div>
+                                      <input type="password" class="form-control" id="pass" placeholder="סיסמה" style="text-align: center">
+                                  </div>
+                                  
+                                  <div class="form-group d-flex justify-content-center">
+                                      <input type="submit" value="התחבר" class="btn login_btn">
+                                  </div>
+                              </form>
+                          </div>
+                          
+                      </div>
+
+                      <div class="container Data animate__animated animate__fadeIn animate__slow	20s ">
+                        <div class="row justify-content-md-center">
+                          <!-- <button type="button" class="btn btn-outline-dark" onclick="Push()">שלח ל דאטה בייס  <i class="fas fa-database"></i></button> -->
+
+                          <div class="col col-lg-5">
+                            <h1 style="text-align: center;">הזן רשומה חדשה:</h1>
+                              
+
+
+                              <div class="row pd-4">
+                                <div class="col-8 col-sm-6">
+                                  <p style=" float:right;">בחר קורס למילוי:</p>
+                                </div>
+                                <div class="col-4 col-sm-6">
+                                  <select class="browser-default custom-select" id="selectMenu">
+                                    <!-- <option selected>בחר קורס</option> -->
+                                  <option value="propabilty">הסתברות</option>
+                                  <option value="complexity">חישוביות וסיבוכיות</option>
+                                  <option value="kelim">כלים מתמטיים</option>
+                                  <option value="ros">פיתוח תוכנה עבור רכב אוטונומי</option>
+                                  <option value="tihnutInternet">תכנות בסביבת אינטרנט</option>
+                                </select>
+                                </div>
+                              </div>
+                              
+                                
+                              <hr>
+                              <!-- Input Data to accessed user -->
+                              <div class="container">
+                                <div class="row text-center  justify-content-md-center pb-3">
+                                  <div class="col">
+                                    <div>תאריך הסרטון: <input type="text" id="datepicker" style="text-align: center;"></div>
+                                  </div>
+                                </div>
+                              </div>   
+                              
+                              
+
+                              
+                              <div class="row pd-4">
+                                <div class="col-8 col-sm-1">
+                                  <i class="fas fa-video"></i>
+                                </div>
+                                <div class="col-4 col-sm-11">
+                                  <div class="input-group input-group-sm mb-3" >
+                                    <div class="input-group-prepend">
+                                    </div>
+                                    
+                                    <input type="text" id="zoomLink" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="קישור לזום"style="text-align: center;">
+                                  </div>
+                          
+                                </div>
+                              </div>
+
                             
-                        </div>
-                        <div class="input-group form-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-key"></i></span>
-                            </div>
-                            <input type="password" class="form-control" id="pass" placeholder="סיסמה" style="text-align: center">
-                        </div>
+                              
+
+                              <!-- הרצאה\תרגול -->
+                              <div class="row pd-4">
+                                <div class="col-8 col-sm-1">
+                                  <i class="fas fa-chalkboard-teacher"></i>
+                                </div>
+                                <div class="col-4 col-sm-11">
+                                  <div class="input-group input-group-sm mb-3" >
+                                    <div class="input-group-prepend">
+                                    </div>
+                                    
+                                    <input type="text" id="zoomSubject" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="נושא: הרצאה\תרגול"style="text-align: center;">
+                                  </div>
+                                </div>
+                              </div>
+
+                              
+                              
+                              <!-- תגובה לסרטון -->
+                              <div class="row pd-4">
+                                <div class="col-8 col-sm-1">
+                                  <i class="fas fa-comments"></i>
+                                </div>
+                                <div class="col-4 col-sm-11">
+                                  <div class="input-group input-group-sm mb-3" >
+                                    <div class="input-group-prepend">
+                                    </div>
+                                    
+                                    <input type="text" id="zoomComment" class="form-control" required aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="הערות"style="text-align: center;">
+                                   
+                                  </div>
+                                  
+                            
+                                </div>
+                              </div>
+                              <div class="row pd-4">
+                                <div class="col-8 col-sm-1">
+                                  
+                                </div>
+                                <div class="col-4 col-sm-11">
+                                  <div class="input-group input-group-sm mb-3 justify-content-md-center" >
+                                    <div class="input-group-prepend ">
+                                    </div>
+                                    
+                                    
+                                    <button type="button" class="btn btn-outline-dark" onclick="Push()">שלח ל דאטה בייס  <i class="fas fa-database"></i></button>
+                                  </div>
+                                  
+                            
+                                </div>
+                              </div>
+                              
+
+                              
+                              
+                          </div>
+                            
+                          </div>
+                      </div>
                         
-                        <div class="form-group d-flex justify-content-center">
-                            <input type="submit" value="התחבר" class="btn login_btn">
-                        </div>
-                    </form>
-                </div>
-                
-            </div>
-
-            <div class="container Data animate__animated animate__fadeIn animate__slow	20s">
-              <div class="row justify-content-md-center">
-                <button type="button" class="btn btn-outline-dark" onclick="Push()">שלח ל דאטה בייס  <i class="fas fa-database"></i></button>
-
-                <div class="col col-lg-5">
-                  <h1 style="text-align: center;">הכנס רשומה חדשה של סרטון מכאן:</h1>
-                     
-
-
-                     <div class="row pd-4">
-                      <div class="col-8 col-sm-6">
-                        <p style=" float:right;">בחר קורס למילוי:</p>
-                      </div>
-                      <div class="col-4 col-sm-6">
-                        <select class="browser-default custom-select" id="selectMenu">
-                          <!-- <option selected>בחר קורס</option> -->
-                        <option value="propabilty">הסתברות</option>
-                        <option value="complexity">חישוביות וסיבוכיות</option>
-                        <option value="kelim">כלים מתמטיים</option>
-                        <option value="ros">פיתוח תוכנה עבור רכב אוטונומי</option>
-                        <option value="tihnutInternet">תכנות בסביבת אינטרנט</option>
-                      </select>
-                      </div>
-                    </div>
-                    
-                      
-                    <hr>
-
-                    <div class="container">
-                      <div class="row text-center  justify-content-md-center pb-3">
-                        <div class="col">
-                          <div>תאריך הסרטון: <input type="text" id="datepicker" style="text-align: center;"></div>
-                        </div>
-                      </div>
-                    </div>   
-                    
-                    
-
-                    
-                    <div class="row pd-4">
-                      <div class="col-8 col-sm-1">
-                        <i class="fas fa-video"></i>
-                      </div>
-                      <div class="col-4 col-sm-11">
-                        <div class="input-group input-group-sm mb-3" >
-                          <div class="input-group-prepend">
-                          </div>
-                          
-                          <input type="text" id="zoomLink" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="קישור לזום"style="text-align: center;">
-                        </div>
-                
-                      </div>
-                    </div>
-
-                  
-                    
-
-                    <!-- הרצאה\תרגול -->
-                    <div class="row pd-4">
-                      <div class="col-8 col-sm-1">
-                        <i class="fas fa-chalkboard-teacher"></i>
-                      </div>
-                      <div class="col-4 col-sm-11">
-                        <div class="input-group input-group-sm mb-3" >
-                          <div class="input-group-prepend">
-                          </div>
-                          
-                          <input type="text" id="zoomSubject" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="נושא: הרצאה\תרגול"style="text-align: center;">
-                        </div>
-                      </div>
-                    </div>
-
-                    
-                    
-                    <!-- תגובה לסרטון -->
-                    <div class="row pd-4">
-                      <div class="col-8 col-sm-1">
-                        <i class="fas fa-comments"></i>
-                      </div>
-                      <div class="col-4 col-sm-11">
-                        <div class="input-group input-group-sm mb-3" >
-                          <div class="input-group-prepend">
-                          </div>
-                          
-                          <input type="text" id="zoomComment" class="form-control" required aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="הערות"style="text-align: center;">
-                        </div>
-                  
-                      </div>
-                    </div>
-                    
-
-                    
-                    
-                </div>
-                  
-                </div>
-              </div>
-              
-            </div>  
-            
-
-            <div class="container Data" id="blat" style="display:none;" >
-                
-            
-        </div>
-    </div> 
-
+                  </div>  
+                </div> 
             </div>
         </div>
     </div>
+            <!-- <div class="container Data" id="blat" style="display:none;" >
+            </div> -->
+
+
+            
+        
+    
 
 
     
@@ -403,7 +421,25 @@ var option;
 function Push(){
   option=document.getElementById('selectMenu').value;
   var dbRef = firebase.database().ref().child(option);
-  var accept=confirm("  האם אתה בטוח שאתה רוצה להכניס רשומה חדשה אל תוך  "+option);
+  var name;
+  switch(option) {
+    case "propabilty":
+      name="קורס הסתברות"
+      break;
+    case "kelim":
+      name="קורס כלים מתמטיים"
+      break;
+    case "complexity":
+      name="קורס חישוביות וסיבוכיות"
+      break;
+    case "ros":
+      name="קורס פיתוח תוכנה לרכב אוטומוני"
+      break;
+    case "tihnutInternet":
+      name="קורס תכנות בסביבת אינטרנט"
+      break;
+  }
+  var accept=confirm("האם אתה בטוח שאתה רוצה להכניס רשומה חדשה אל תוך "+name);
   if (accept==true){
     
     date=document.getElementById('datepicker').value
@@ -416,10 +452,9 @@ function Push(){
          subject:subject,
          comment:comment
       });
-      //alert('הנתונים נשלחו בהצלחה אל מאגר המידע');
       
       Swal.fire({
-      title: "נשלח בהצלחה" + " " + subject +" "+ " אל "+" " +option ,
+      title: "נשלח בהצלחה" + " " + subject +" "+ " אל "+" " +name ,
       icon: 'success',
       showConfirmButton: false,
       timer: 5000

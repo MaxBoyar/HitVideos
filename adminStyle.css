@@ -22,6 +22,19 @@
   
  }
  
+ .Data{
+    margin-top: -5vh;
+    
+ }
+
+ @media (max-width: 800px){
+    .Data{
+    
+        margin-top: -19vh;
+      
+    }
+    
+}
  /* .inner-html2{
      height: 30vh;
     
