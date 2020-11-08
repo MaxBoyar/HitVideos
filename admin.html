@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+  <!-- Fontawesome -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+   <!-- font  -->
+   <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
+  
+   <!-- popup -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    
+  
+  <!-- jquery -->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+
+  
+    
+    <link rel="stylesheet" href="adminStyle.css">
+
+    <title>HIT Zoom videos</title>
+</head>
+<body dir="rtl" data-spy="scroll" data-target="#navbarNavAltMarkup">
+
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark" id="nav1">
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup" >
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="index.html" style="float:right">דף הבית <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="index.html#courses" tyle="float:right">אינדקס סרטונים</a>
+            <a class="nav-item nav-link" href="admin.html" style="float:right">ניהול</a>
+            <a class="nav-link " id="log-out" href="" style=" float:right; display:none;">יציאה</a>
+                   
+          </div>
+        </div>
+      </nav>
+
+
+      
+      
+
+
+
+
+
+
+
+    <!-- <div class="text-center">
+     <img src="https://image.freepik.com/free-vector/colorful-gradient-background_52683-7009.jpg" class="img-fluid" alt="Responsive image">
+    </div> -->
+    <div class="landing">
+        <div class="home-wrap">
+            <div class="inner-html" id="asd">
+               <div class="container login_window">
+        <div class="d-flex justify-content-center h-100">
+            <div class="card"  style=" display: none;">
+                <div class="card-header">
+                    <h3 style="text-align: center;">התחברות לממשק ניהול</h3>
+                    <div class="d-flex justify-content-end social_icon">
+                        <span><i class="fab fa-facebook-square"></i></span>
+                        <span><i class="fab fa-google-plus-square"></i></span>
+                        <span><i class="fab fa-twitter-square"></i></span>
+                    </div>
+                </div>
+                <div class="card-body  animate__animated animate__fadeIn animate__slow	6s" >
+                    <form id="login-form">
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            </div>
+                            <input type="text" class="form-control" id="user" placeholder="אימייל" style="text-align: center">
+                            
+                        </div>
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-key"></i></span>
+                            </div>
+                            <input type="password" class="form-control" id="pass" placeholder="סיסמה" style="text-align: center">
+                        </div>
+                        
+                        <div class="form-group d-flex justify-content-center">
+                            <input type="submit" value="התחבר" class="btn login_btn">
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+
+            <div class="container Data animate__animated animate__fadeIn animate__slow	20s">
+              <div class="row justify-content-md-center">
+                <button type="button" class="btn btn-outline-dark" onclick="Push()">שלח ל דאטה בייס  <i class="fas fa-database"></i></button>
+
+                <div class="col col-lg-5">
+                  <h1 style="text-align: center;">הכנס רשומה חדשה של סרטון מכאן:</h1>
+                     
+
+
+                     <div class="row pd-4">
+                      <div class="col-8 col-sm-6">
+                        <p style=" float:right;">בחר קורס למילוי:</p>
+                      </div>
+                      <div class="col-4 col-sm-6">
+                        <select class="browser-default custom-select" id="selectMenu">
+                          <!-- <option selected>בחר קורס</option> -->
+                        <option value="propabilty">הסתברות</option>
+                        <option value="complexity">חישוביות וסיבוכיות</option>
+                        <option value="kelim">כלים מתמטיים</option>
+                        <option value="ros">פיתוח תוכנה עבור רכב אוטונומי</option>
+                        <option value="tihnutInternet">תכנות בסביבת אינטרנט</option>
+                      </select>
+                      </div>
+                    </div>
+                    
+                      
+                    <hr>
+
+                    <div class="container">
+                      <div class="row text-center  justify-content-md-center pb-3">
+                        <div class="col">
+                          <div>תאריך הסרטון: <input type="text" id="datepicker" style="text-align: center;"></div>
+                        </div>
+                      </div>
+                    </div>   
+                    
+                    
+
+                    
+                    <div class="row pd-4">
+                      <div class="col-8 col-sm-1">
+                        <i class="fas fa-video"></i>
+                      </div>
+                      <div class="col-4 col-sm-11">
+                        <div class="input-group input-group-sm mb-3" >
+                          <div class="input-group-prepend">
+                          </div>
+                          
+                          <input type="text" id="zoomLink" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="קישור לזום"style="text-align: center;">
+                        </div>
+                
+                      </div>
+                    </div>
+
+                  
+                    
+
+                    <!-- הרצאה\תרגול -->
+                    <div class="row pd-4">
+                      <div class="col-8 col-sm-1">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                      </div>
+                      <div class="col-4 col-sm-11">
+                        <div class="input-group input-group-sm mb-3" >
+                          <div class="input-group-prepend">
+                          </div>
+                          
+                          <input type="text" id="zoomSubject" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="נושא: הרצאה\תרגול"style="text-align: center;">
+                        </div>
+                      </div>
+                    </div>
+
+                    
+                    
+                    <!-- תגובה לסרטון -->
+                    <div class="row pd-4">
+                      <div class="col-8 col-sm-1">
+                        <i class="fas fa-comments"></i>
+                      </div>
+                      <div class="col-4 col-sm-11">
+                        <div class="input-group input-group-sm mb-3" >
+                          <div class="input-group-prepend">
+                          </div>
+                          
+                          <input type="text" id="zoomComment" class="form-control" required aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="הערות"style="text-align: center;">
+                        </div>
+                  
+                      </div>
+                    </div>
+                    
+
+                    
+                    
+                </div>
+                  
+                </div>
+              </div>
+              
+            </div>  
+            
+
+            <div class="container Data" id="blat" style="display:none;" >
+                
+            
+        </div>
+    </div> 
+
+            </div>
+        </div>
+    </div>
+
+
+    
+
+
+<footer>
+    
+    <div class="container">
+        <div class="row text-center  justify-content-md-center">
+          <div class="col">
+      
+            <hr>
+            <h5>CONTACT US</h5>
+         
+            
+            <i class="far fa-envelope fa-2x"></i>
+            <p id='mail'>mboyar54@gmail.com</p>
+          </div>
+          
+        </div>
+      </div>    
+</footer>
+
+    
+ 
+   
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-database.js"></script>
+  
+<script>
+  /*
+  This is open source web app made with Love for students in Computer science faculty @HitHolon 
+  I am not looking for any profit but only success for students
+  Dont try to steal or write to my apiKey it is protected! 
+  if you have succeded please let me know: mboyar54@gmail.com 
+  Open source for the win!!!
+  */
+
+  var firebaseConfig = {
+  apiKey: "AIzaSyD2EtDid4bv498Z58hnan7rYjEZ3bdJuaU",
+  authDomain: "hitzoom.firebaseapp.com",
+  databaseURL: "https://hitzoom.firebaseio.com",
+  projectId: "hitzoom",
+  storageBucket: "hitzoom.appspot.com",
+  messagingSenderId: "618359006692",
+  appId: "1:618359006692:web:6ab2d27e3a275b28a793f1",
+  measurementId: "G-JP1NSJFDKY"
+};
+firebase.initializeApp(firebaseConfig);
+var auth = firebase.auth();
+
+
+$( function() {
+    $( "#datepicker" ).datepicker({
+      dateFormat: "dd-mm-yy"
+    });
+  } );
+
+
+
+////Login
+try{
+  const loginForm = document.querySelector('#login-form');
+  loginForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  
+  // get user info
+  const email = document.querySelector('#user').value;
+  const password = document.querySelector('#pass').value;
+  
+
+    // log the user in
+    auth.signInWithEmailAndPassword(email, password).then((cred) => {
+      
+      //console.log(cred.user)
+
+      
+        
+      loginForm.reset();
+      const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 2000,
+        timerProgressBar: true,
+        
+      })
+      
+      Toast.fire({
+        icon: 'success',
+        title: 'Signed in successfully'
+      })
+    }).catch(err=>{
+      Swal.fire({
+        title: '!שימו לב',
+        text: 'שם משתמש או סיסמה לא נכונים',
+        icon: 'error',
+        confirmButtonText: 'אישור'
+      })
+    })
+
+  });
+
+
+}
+catch(err){
+  
+}
+
+//Logout
+try{
+  const logout=document.querySelector('#log-out');//Navbar logout ID
+  logout.addEventListener('click',(e)=>{
+    e.preventDefault();
+    
+    Swal.fire({
+      title: 'התנתקת בהצלחה',
+      icon: 'success',
+      showConfirmButton: false,
+      timer: 1500
+      
+      
+      
+    })
+    auth.signOut();
+  });
+  
+  
+}
+catch(err){
+
+}
+
+var loginForm = document.querySelector('.card');
+var loggedOut=document.querySelectorAll('#log-out');
+var dataUI=document.querySelector('.Data');
+var logoutNav=document.querySelector('#log-out');
+auth.onAuthStateChanged(user => {
+  if (user){
+    
+    setupUI(user);
+    
+    
+  }
+  else{
+    
+    setupUI();
+  }
+})
+
+const setupUI=(user) =>{
+  if (user){
+    //console.log('setup ui')
+    //console.log(loginForm)
+    loginForm.style.display="none"
+    dataUI.style.display="block"
+    logoutNav.style.display="block"
+    //loggedIn.forEach(item=> item.style.display="block");
+    //loggedOut.forEach(item=> item.style.display="none");
+  }
+  else{
+    loginForm.style.display="block"
+    dataUI.style.display="none"
+    logoutNav.style.display="none"
+    //dataUI.style.display="block"//testttttttTTTTT
+    
+    
+    //loggedIn.forEach(item=> item.style.display="none");
+    
+    //loggedOut.forEach(item=> item.style.display="block");
+    
+
+  }
+}
+
+var link;
+var option;
+function Push(){
+  option=document.getElementById('selectMenu').value;
+  var dbRef = firebase.database().ref().child(option);
+  var accept=confirm("  האם אתה בטוח שאתה רוצה להכניס רשומה חדשה אל תוך  "+option);
+  if (accept==true){
+    
+    date=document.getElementById('datepicker').value
+    link=document.getElementById('zoomLink').value
+    comment=document.getElementById('zoomComment').value
+    subject=document.getElementById('zoomSubject').value
+    dbRef.push({
+         zoom:link,
+         Date:date,
+         subject:subject,
+         comment:comment
+      });
+      //alert('הנתונים נשלחו בהצלחה אל מאגר המידע');
+      
+      Swal.fire({
+      title: "נשלח בהצלחה" + " " + subject +" "+ " אל "+" " +option ,
+      icon: 'success',
+      showConfirmButton: false,
+      timer: 5000
+      
+      
+      
+    })
+      setTimeout(() => {  location.reload(); }, 2500);
+        
+    //location.reload();
+  }
+  
+      
+}
+
+
+// auth.onAuthStateChanged(user => {
+//   if (user){
+//     loginForm.style.display="none"
+//     dataUI.style.display="block"
+//     //loggedOut.style.display="block"
+//     //setupUI(user);
+    
+    
+//   }
+//   else{
+//     loginForm.style.display="block"
+//     dataUI.style.display="block"
+//     // console.log(loggedOut)
+//     //\\loggedOut.style.display="none"
+//     //setupUI();
+//   }
+// })
+
+
+
+
+// const logTo=document.querySelector('#loginAdmin');//Navbar logout ID
+//   logTo.addEventListener('click',(e)=>{
+//     e.preventDefault();
+    
+//     Swal.fire({
+//       title: 'התחברות לממשק ניהול',
+//       html: `<input type="text" id="login" class="swal2-input" placeholder="Username">
+//       <input type="password" id="password" class="swal2-input" placeholder="Password">`,
+//       confirmButtonText: 'Sign in',
+//       focusConfirm: false,
+//       preConfirm: () => {
+//         const login = Swal.getPopup().querySelector('#login').value
+//         const password = Swal.getPopup().querySelector('#password').value
+//         if (!login || !password) {
+//           Swal.showValidationMessage(`Please enter login and password`)
+//         }
+//         try{
+//           auth.signInWithEmailAndPassword(login,password).then((cred) => {
+//             console.log("success")
+//             console.log(cred.user)
+           
+            
+//             // const Toast = Swal.mixin({
+//             //   toast: true,
+//             //   position: 'top-end',
+//             //   showConfirmButton: false,
+//             //   timer: 2000,
+//             //   timerProgressBar: true,
+              
+//             // })
+            
+            
+//           }).catch(err=>{
+//             e.preventDefault();
+//             console.log(err)
+//             Swal.fire({
+//               title: '!שימו לב',
+//               text: 'שם משתמש או סיסמה לא נכונים',
+//               icon: 'error',
+//               confirmButtonText: 'אישור'
+//             })
+//           })
+
+//         }
+//         catch(err){
+//           //console.log(err)
+//           console.log("xxddddddd")
+
+//         }
+        
+
+//         return { login: login, password: password }
+//       }
+//     })
+//   });
+
+
+
+</script>
+    
+</body>
+</html>

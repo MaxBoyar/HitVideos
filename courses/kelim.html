@@ -30,8 +30,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup" >
           <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="index.html">דף הבית <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link active" href="../index.html">דף הבית <span class="sr-only">(current)</span></a>
             <a class="nav-item nav-link" href="movies.html">אינדקס סרטונים</a>
+            <a class="nav-item nav-link" href="../admin.html" style="float:right">ניהול</a>
             
           </div>
         </div>
@@ -56,34 +57,76 @@
         </table>
     </div>
    
- 
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-database.js"></script> 
 <script>
+var firebaseConfig = {
+  apiKey: "AIzaSyD2EtDid4bv498Z58hnan7rYjEZ3bdJuaU",
+  authDomain: "hitzoom.firebaseapp.com",
+  databaseURL: "https://hitzoom.firebaseio.com",
+  projectId: "hitzoom",
+  storageBucket: "hitzoom.appspot.com",
+  messagingSenderId: "618359006692",
+  appId: "1:618359006692:web:6ab2d27e3a275b28a793f1",
+  measurementId: "G-JP1NSJFDKY"
+};
+firebase.initializeApp(firebaseConfig);
+
+function getData(){
+        
+        firebase.database().ref().child("kelim").once('value',function(snapshot){
+            
+            snapshot.forEach(function(childSnapshot)
+            {
+                var childData=childSnapshot.val();
+                
+
+                var table= document.querySelector(".firstTable")
+                var row=`<tr>
+                        <th scope="row">-</th>
+                        <td>${childData.subject}</td>
+                        <td>
+                            <a href="${childData.zoom}" target="_blank"><button class="btn btn-info">Link</button></a>
+                        </td>
+                        <td>${childData.comment}</td>
+                        <td>${childData.Date}</td>
+
+                    </tr>`
+                 table.innerHTML += row
+      
+            })  
+            
+        })
+        }
+    getData();
+
      
 
-        buildTable(dataJson,'.firstTable');
+    //     buildTable(dataJson,'.firstTable');
     
     
   
-    function buildTable(data,att){
-        var table= document.querySelector(att)
-        var counter=1;
-        for(var i=0;i<data.length;i++){
-            console.log(data[0].conetnt)
-            var row=`<tr>
-                        <th scope="row">${counter}</th>
-                        <td>${data[i].content}</td>
-                        <td>
-                            <a href="${data[i].link}"><button class="btn btn-info">Link</button></a>
-                        </td>
-                        <td>${data[i].comment}</td>
-                        <td>${data[i].date}</td>
+    // function buildTable(data,att){
+    //     var table= document.querySelector(att)
+    //     var counter=1;
+    //     for(var i=0;i<data.length;i++){
+    //         console.log(data[0].conetnt)
+    //         var row=`<tr>
+    //                     <th scope="row">${counter}</th>
+    //                     <td>${data[i].content}</td>
+    //                     <td>
+    //                         <a href="${data[i].link}"><button class="btn btn-info">Link</button></a>
+    //                     </td>
+    //                     <td>${data[i].comment}</td>
+    //                     <td>${data[i].date}</td>
 
-                    </tr>`
-            table.innerHTML += row
-            counter++;
-        }
+    //                 </tr>`
+    //         table.innerHTML += row
+    //         counter++;
+    //     }
         
-    };
+    // };
 
 </script>
 </body>

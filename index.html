@@ -24,7 +24,13 @@
    <!-- font  -->
    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
-
+  
+   <!-- popup -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <!-- <script src="sweetalert2.all.min.js"></script>
+  <script src="sweetalert2.min.js"></script> -->
+  
+  
     
     <link rel="stylesheet" href="style.css">
 
@@ -42,10 +48,55 @@
           <div class="navbar-nav">
             <a class="nav-item nav-link active" href="index.html" style="float:right">דף הבית <span class="sr-only">(current)</span></a>
             <a class="nav-item nav-link" href="index.html#courses" tyle="float:right">אינדקס סרטונים</a>
+            <a class="nav-item nav-link" href="admin.html" style="float:right">ניהול</a>
             
           </div>
         </div>
       </nav>
+
+      <!-- <div class="container login_window">
+        <div class="d-flex justify-content-center h-100">
+            <div class="card">
+                <div class="card-header">
+                    <h3 style="text-align: center;">התחברות לממשק ניהול</h3>
+                    <div class="d-flex justify-content-end social_icon">
+                        <span><i class="fab fa-facebook-square"></i></span>
+                        <span><i class="fab fa-google-plus-square"></i></span>
+                        <span><i class="fab fa-twitter-square"></i></span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <form id="login-form">
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            </div>
+                            <input type="text" class="form-control" id="user" placeholder="אימייל" style="text-align: center">
+                            
+                        </div>
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-key"></i></span>
+                            </div>
+                            <input type="password" class="form-control" id="pass" placeholder="סיסמה" style="text-align: center">
+                        </div>
+                        
+                        <div class="form-group d-flex justify-content-center">
+                            <input type="submit" value="התחבר" class="btn login_btn">
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </div> -->
+
+
+
+
+
+
+
     <!-- <div class="text-center">
      <img src="https://image.freepik.com/free-vector/colorful-gradient-background_52683-7009.jpg" class="img-fluid" alt="Responsive image">
     </div> -->
@@ -202,7 +253,81 @@
     
  
    
+
+<script>
+//   var firebaseConfig = {
+//   apiKey: "AIzaSyD2EtDid4bv498Z58hnan7rYjEZ3bdJuaU",
+//   authDomain: "hitzoom.firebaseapp.com",
+//   databaseURL: "https://hitzoom.firebaseio.com",
+//   projectId: "hitzoom",
+//   storageBucket: "hitzoom.appspot.com",
+//   messagingSenderId: "618359006692",
+//   appId: "1:618359006692:web:6ab2d27e3a275b28a793f1",
+//   measurementId: "G-JP1NSJFDKY"
+// };
+// firebase.initializeApp(firebaseConfig);
+// var auth = firebase.auth();
+
+
+// const logTo=document.querySelector('#loginAdmin');//Navbar logout ID
+//   logTo.addEventListener('click',(e)=>{
+//     e.preventDefault();
     
+//     Swal.fire({
+//       title: 'התחברות לממשק ניהול',
+//       html: `<input type="text" id="login" class="swal2-input" placeholder="Username">
+//       <input type="password" id="password" class="swal2-input" placeholder="Password">`,
+//       confirmButtonText: 'Sign in',
+//       focusConfirm: false,
+//       preConfirm: () => {
+//         const login = Swal.getPopup().querySelector('#login').value
+//         const password = Swal.getPopup().querySelector('#password').value
+//         if (!login || !password) {
+//           Swal.showValidationMessage(`Please enter login and password`)
+//         }
+//         try{
+//           auth.signInWithEmailAndPassword(login,password).then((cred) => {
+//             console.log("success")
+//             console.log(cred.user)
+           
+            
+//             // const Toast = Swal.mixin({
+//             //   toast: true,
+//             //   position: 'top-end',
+//             //   showConfirmButton: false,
+//             //   timer: 2000,
+//             //   timerProgressBar: true,
+              
+//             // })
+            
+            
+//           }).catch(err=>{
+//             e.preventDefault();
+//             console.log(err)
+//             Swal.fire({
+//               title: '!שימו לב',
+//               text: 'שם משתמש או סיסמה לא נכונים',
+//               icon: 'error',
+//               confirmButtonText: 'אישור'
+//             })
+//           })
+
+//         }
+//         catch(err){
+//           //console.log(err)
+//           console.log("xxddddddd")
+
+//         }
+        
+
+//         return { login: login, password: password }
+//       }
+//     })
+//   });
+
+
+
+</script>
     
 </body>
 </html>
