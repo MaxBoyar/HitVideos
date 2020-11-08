@@ -23,11 +23,11 @@
  }
  
  .Data{
-    margin-top: -15vh;
+    margin-top: -5vh;
     
  }
 
- @media (max-width: 800px){
+ @media (max-width: 1000px){
     .Data{
     
         margin-top: -19vh;
