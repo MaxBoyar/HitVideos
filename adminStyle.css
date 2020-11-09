@@ -21,6 +21,29 @@
     background-size: cover;
   
  }
+
+ @media (max-width: 1000px){
+    .inner-html{
+        height: 70vh;
+       
+        background: url('https://images.pexels.com/photos/994605/pexels-photo-994605.jpeg?cs=srgb&dl=pexels-fabian-wiktor-994605.jpg&fm=jpg') no-repeat center center fixed; 
+        
+      
+       
+       -webkit-background-size: cover;
+       -moz-background-size: cover;
+       -o-background-size: cover;
+       background-size: cover;
+     
+    }
+   
+    
+}
+
+.card{
+    margin-top: -15vh;
+
+}
  
  .Data{
     margin-top: -12vh;
