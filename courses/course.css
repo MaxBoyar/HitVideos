@@ -28,6 +28,12 @@ html body{
    text-align: center;
 
 }
+.secondTable{
+    
+   opacity: 0.9;
+   text-align: center;
+
+}
 
 .name{
     text-shadow: .1rem .1rem .8rem black;
