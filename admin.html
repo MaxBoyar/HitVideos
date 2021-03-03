@@ -128,6 +128,8 @@
                                 <div class="col-4 col-sm-6">
                                   <select class="browser-default custom-select" id="selectMenu">
                                     <!-- <option selected>בחר קורס</option> -->
+                                    <option value="ml">למידת מכונה</option>
+                                    <option value="mlTirgul">למידת מכונה תרגול</option>
                                   <option value="propabilty">הסתברות</option>
                                   <option value="complexity">חישוביות וסיבוכיות</option>
                                   <option value="complexityTirgul"> חישוביות וסיבוכיות תרגול</option>
@@ -442,6 +444,12 @@ function Push(){
     case "tihnutInternet":
       name="קורס תכנות בסביבת אינטרנט"
       break;
+    case "ml":
+      name="למידת מכונה-הרצאה"
+      break; 
+      case "mlTirgul":
+      name="למידת מכונה-תרגול"
+      break; 
   }
   var accept=confirm("האם אתה בטוח שאתה רוצה להכניס רשומה חדשה אל תוך "+name);
   if (accept==true){

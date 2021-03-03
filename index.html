@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="icon" href="https://img.icons8.com/nolan/64/video.png" />
     <!-- Bootstrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -49,57 +51,20 @@
             <a class="nav-item nav-link active" href="index.html" style="float:right">דף הבית <span class="sr-only">(current)</span></a>
             <a class="nav-item nav-link" href="index.html#courses" tyle="float:right">אינדקס סרטונים</a>
             <a class="nav-item nav-link" href="admin.html" style="float:right">ניהול</a>
-            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                קורסים
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="./courses/complexity.html">חישוביות וסיבוכיות</a>
+                <a class="dropdown-item" href="./courses/ml.html">למידת מכונה</a>
+               
+              </div>
+            </li>
           </div>
         </div>
       </nav>
 
-      <!-- <div class="container login_window">
-        <div class="d-flex justify-content-center h-100">
-            <div class="card">
-                <div class="card-header">
-                    <h3 style="text-align: center;">התחברות לממשק ניהול</h3>
-                    <div class="d-flex justify-content-end social_icon">
-                        <span><i class="fab fa-facebook-square"></i></span>
-                        <span><i class="fab fa-google-plus-square"></i></span>
-                        <span><i class="fab fa-twitter-square"></i></span>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <form id="login-form">
-                        <div class="input-group form-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-user"></i></span>
-                            </div>
-                            <input type="text" class="form-control" id="user" placeholder="אימייל" style="text-align: center">
-                            
-                        </div>
-                        <div class="input-group form-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-key"></i></span>
-                            </div>
-                            <input type="password" class="form-control" id="pass" placeholder="סיסמה" style="text-align: center">
-                        </div>
-                        
-                        <div class="form-group d-flex justify-content-center">
-                            <input type="submit" value="התחבר" class="btn login_btn">
-                        </div>
-                    </form>
-                </div>
-                
-            </div>
-        </div>
-    </div> -->
-
-
-
-
-
-
-
-    <!-- <div class="text-center">
-     <img src="https://image.freepik.com/free-vector/colorful-gradient-background_52683-7009.jpg" class="img-fluid" alt="Responsive image">
-    </div> -->
     <div class="landing">
         <div class="home-wrap">
             <div class="inner-html" id="asd">
@@ -107,10 +72,8 @@
             </div>
         </div>
     </div>
-    <div class="welcome text-center ">
-            <!-- <h5>Welcom to Dream</h5>
-            <h5>Welcom to Dream</h5> -->
-            <h1 class=" animate__animated animate__fadeIn animate__slow	3s">ברוכים הבאים למאגר הסרטונים </h1>
+    <div class="welcome text-center animate__animated animate__fadeInUp animate__slow	4s"">
+            <h1 class=" animate__animated animate__fadeInUp animate__slow	4s">ברוכים הבאים למאגר הסרטונים </h1>
             <h5> אתר זה נבנה ע"י סטודנטים של המכון ומיועד לאגור את כלל הסרטונים של הקורסים הנבחרים על מנת לעזור לסטודנטים לעבור את תקופת הקורונה בחיוך:)</h5>
             <h5>ולעשות סדר בצורה מאורגנת עבור כל הסרטונים של תוכנת זום</h5>
             
@@ -121,29 +84,22 @@
     
     
 
-    <!-- !-- Start aboutMe Section -->
+    <!-- !-- Courses Section -->
 <div id="courses" class="">
     <div class="jumbotron  ">
         <div class="narrow">
             <div class="col-12">
-                <h3 class="heading mb-5" style="text-align: center;">קורסים</h3>
+                <h3 class="heading mb-5" style="text-align: center;"> קורסים שנה ג' מדמ"ח</h3>
                 <div class="heading-underline"></div>
             </div>
             <div class="row text-center">
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                          <h5 class="card-title">כלים מתמטיים</h5>
-                          <p>כרגע אין עוד סרטונים</p>
-                          <!-- <a href="#" class="btn btn-primary">מעבר לקורס </a> -->
-                        </div>
-                      </div>
-
-                </div>
+                
                 <div class="col-md-4">
                     <div class="card">
                         <div class="card-body">
                           <h5 class="card-title">חישוביות וסיבוכיות</h5>
+                          <p>עם המרצה גילה מורגנשטרן</p>
+                          <p>2021-סמסטר א</p>
                           <a href="./courses/complexity.html" class="btn btn-outline-primary">מעבר לקורס</a>
                           
                           <!-- <a href="#" class="btn btn-primary">מעבר לקורס</a> -->
@@ -151,37 +107,21 @@
                       </div>
 
                 </div>
-                <!-- <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                          <h5 class="card-title">הסתברות</h5>
-                          
-                          <a href="./courses/histabrut.html" class="btn btn-outline-primary">מעבר לקורס</a>
-                        </div>
-                      </div> 
-
-                </div> -->
-                <!-- <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                          <h5 class="card-title">פיתוח תוכנה עבור רכב אוטונומי</h5>
-                          
-                          <a href="./courses/autonomic.html" class="btn btn-outline-primary">מעבר לקורס</a>
-                        </div>
-                      </div> 
-
-                </div> -->
-
-                <!-- <div class="col-md-4">
+                <div class="col-md-4">
                   <div class="card">
                       <div class="card-body">
-                        <h5 class="card-title">תכנות בסביבת אינטרנט</h5>
+                        <h5 class="card-title">למידת מכונה</h5>
+                        <p>עם המרצה פרדימן משה</p>
+                        <p>2021-סמסטר ב</p>
+                        <a href="./courses/ml.html" class="btn btn-outline-primary">מעבר לקורס</a>
                         
-                        <a href="./courses/tihnut.html" class="btn btn-outline-primary">מעבר לקורס</a>
+                        <!-- <a href="#" class="btn btn-primary">מעבר לקורס</a> -->
                       </div>
-                    </div> 
+                    </div>
 
-              </div> -->
+              </div>
+                
+              
                 
                 
             </div>

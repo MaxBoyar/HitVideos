@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://img.icons8.com/nolan/64/learning.png" />
+    <!-- Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+     
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    
+
+    
+    <link rel="stylesheet" href="course.css">
+
+    <title>למידת מכונה</title>
+</head>
+<body dir="rtl">
+
+
+   
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark" id="nav1">
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup" >
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="../index.html" style="float:right">דף הבית <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="../index.html#courses" tyle="float:right">אינדקס סרטונים</a>
+            <a class="nav-item nav-link" href="../admin.html" style="float:right">ניהול</a>
+          </div>
+        </div>
+      </nav>
+      <div class="container">
+        <div class="row text-center  justify-content-md-center">
+          <div class="col">
+            <h1 class="text-center mt-5 name" style="color: azure;">קורס למידת מכונה</h1>
+                
+                <div class="alert alert-secondary" role="alert">
+                  <a class="btn btn-light btn-lg " href="../index.html#courses">חזרה לקורסים</a>
+                <!-- <a class="btn btn-info btn-lg " href="https://drive.google.com/drive/folders/1J4bAO6eaPa2N0pAwRqcn3BsfrCmDct6E">סיכומים</a> -->
+                  יש לכם רעיונות לשיפור/דברים להוסיף ? שתפו אותי! mboyar54@gmail.com
+                </div>
+          </div>
+        </div>
+      </div>    
+   
+
+
+    <div class="container">
+        
+      
+        <table class="table firstTable table-bordered table-responsive-md  table-dark">
+            
+            
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>תוכן</th>
+                <th>קישור</th>
+                <th>נושאים</th>
+                <th>תאריך</th>
+                
+                
+                
+              </tr>
+            </thead>
+          
+            <tbody>
+              
+            </tbody>
+        </table>
+        <div class="contianer " style="text-align: center;">
+          <h1 id="spinnerTop"> <i class="fas fa-spinner fa-spin" style="color:white;"> </i> </h1>
+        </div>
+        
+        
+    </div>
+<div class="container">
+    
+    
+    
+    <div class="card">
+        <div class="card-body">
+          <h5 style="text-align: center;">תרגולים</h5>
+        </div>
+    </div>
+    <table class="table secondTable table-bordered table-responsive-md btn-table table-dark" id="nav1">
+
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>תוכן</th>
+            <th>קישור</th>
+            <th>נושאים</th>
+            <th>תאריך</th>
+            
+            
+          </tr>
+        </thead>
+      
+        <tbody>
+        </tbody>
+    </table>
+
+</div>
+    <
+   
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-database.js"></script>
+<script>
+var firebaseConfig = {
+  apiKey: "AIzaSyD2EtDid4bv498Z58hnan7rYjEZ3bdJuaU",
+  authDomain: "hitzoom.firebaseapp.com",
+  databaseURL: "https://hitzoom.firebaseio.com",
+  projectId: "hitzoom",
+  storageBucket: "hitzoom.appspot.com",
+  messagingSenderId: "618359006692",
+  appId: "1:618359006692:web:6ab2d27e3a275b28a793f1",
+  measurementId: "G-JP1NSJFDKY"
+};
+firebase.initializeApp(firebaseConfig);
+
+function getData(){
+        
+        firebase.database().ref().child("ml").once('value',function(snapshot){
+            
+            snapshot.forEach(function(childSnapshot)
+            {
+                var childData=childSnapshot.val();
+                
+                
+                var color=childData.subject;
+                var number=color.match(/\d+/)[0];
+                
+                if(number%2==0){
+                  var table= document.querySelector(".firstTable")
+                  var row=`<tr class="table-dark">
+                        <th scope="row">-</th>
+                        <td>${childData.subject}</td>
+                        <td>
+                            <a href="${childData.zoom}" target="_blank"><button class="btn btn-info">Link</button></a>
+                        </td>
+                        <td>${childData.comment}</td>
+                        <td>${childData.Date}</td>
+
+                    </tr>`
+                  table.innerHTML += row
+
+                }
+                else{
+                  var table= document.querySelector(".firstTable")
+                  var row=`<tr >
+                        <th scope="row">-</th>
+                        <td>${childData.subject}</td>
+                        <td>
+                            <a href="${childData.zoom}" target="_blank"><button class="btn btn-info">Link</button></a>
+                        </td>
+                        <td>${childData.comment}</td>
+                        <td>${childData.Date}</td>
+
+                    </tr>`
+                  table.innerHTML += row
+
+                }
+      
+      
+            })  
+            var myobj = document.getElementById("spinnerTop");
+            myobj.remove();
+            
+        })
+
+        firebase.database().ref().child("mlTirgul").once('value',function(snapshot){
+            
+            snapshot.forEach(function(childSnapshot)
+            {
+                var childData=childSnapshot.val();
+                
+
+                var table= document.querySelector(".secondTable")
+                var row=`<tr >
+                        <th scope="row">-</th>
+                        <td>${childData.subject}</td>
+                        <td>
+                            <a href="${childData.zoom}" target="_blank"><button class="btn btn-info">Link</button></a>
+                        </td>
+                        <td>${childData.comment}</td>
+                        <td>${childData.Date}</td>
+
+                    </tr>`
+                 table.innerHTML += row
+      
+            })  
+            
+        })
+        }
+    getData();
+    
+    
+</script>
+</body>
+    
+</html>
