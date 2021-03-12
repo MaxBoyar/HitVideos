@@ -1,4 +1,4 @@
 # HitVideos
 
-Web aggregating all HIT zoom videos
+Web app with all Hit holon CS courses videos.
 https://maxboyar.github.io/HitVideos/.

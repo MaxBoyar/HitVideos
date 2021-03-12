@@ -128,14 +128,19 @@
                                 <div class="col-4 col-sm-6">
                                   <select class="browser-default custom-select" id="selectMenu">
                                     <!-- <option selected>בחר קורס</option> -->
-                                    <option value="ml">למידת מכונה</option>
-                                    <option value="mlTirgul">למידת מכונה תרגול</option>
-                                  <option value="propabilty">הסתברות</option>
+                                  <option value="ml">למידת מכונה</option>
+                                  <option value="mlTirgul">למידת מכונה תרגול</option>
+                                  <option value="devops">דבאופס</option>
+                                  <option value="devopsTirgul">דבאופס-תרגול</option>
+                                  <option value="internetSecurity">אבטחת רשתות</option>
+                                  <option value="internetSecurityTirgul">אבטחת רשתות תרגול</option>
+                                  
+                                  <!-- <option value="propabilty">הסתברות</option>
                                   <option value="complexity">חישוביות וסיבוכיות</option>
                                   <option value="complexityTirgul"> חישוביות וסיבוכיות תרגול</option>
                                   <option value="kelim">כלים מתמטיים</option>
                                   <option value="ros">פיתוח תוכנה עבור רכב אוטונומי</option>
-                                  <option value="tihnutInternet">תכנות בסביבת אינטרנט</option>
+                                  <option value="tihnutInternet">תכנות בסביבת אינטרנט</option> -->
                                 </select>
                                 </div>
                               </div>
@@ -182,7 +187,7 @@
                                     <div class="input-group-prepend">
                                     </div>
                                     
-                                    <input type="text" id="zoomSubject" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="נושא: הרצאה\תרגול"style="text-align: center;">
+                                    <input type="text" id="zoomSubject" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder=" נושא: הרצאה\תרגול (חובה לציין מספר )"style="text-align: center;">
                                   </div>
                                 </div>
                               </div>
@@ -396,29 +401,23 @@ auth.onAuthStateChanged(user => {
 
 const setupUI=(user) =>{
   if (user){
-    //console.log('setup ui')
-    //console.log(loginForm)
     loginForm.style.display="none"
     dataUI.style.display="block"
     logoutNav.style.display="block"
-    //loggedIn.forEach(item=> item.style.display="block");
-    //loggedOut.forEach(item=> item.style.display="none");
+
   }
   else{
     loginForm.style.display="block"
     dataUI.style.display="none"
     logoutNav.style.display="none"
-    //dataUI.style.display="block"//testttttttTTTTT
-    
-    
-    //loggedIn.forEach(item=> item.style.display="none");
-    
-    //loggedOut.forEach(item=> item.style.display="block");
+
     
 
   }
 }
 
+
+//Push Data to Firebase
 var link;
 var option;
 function Push(){
@@ -426,30 +425,25 @@ function Push(){
   var dbRef = firebase.database().ref().child(option);
   var name;
   switch(option) {
-    case "propabilty":
-      name="קורס הסתברות"
+    case "devops":
+      name="דבאופס"
       break;
-    case "kelim":
-      name="קורס כלים מתמטיים"
+      case "devopsTirgul":
+      name="דבאופס-תרגול"
       break;
-    case "complexity":
-      name="קורס חישוביות וסיבוכיות"
+      case "internetSecurity":
+      name="אבטחת רשתות "
       break;
-    case "complexityTirgul":
-      name="קורס חישוביות וסיבוכיות"
-      break;  
-    case "ros":
-      name="קורס פיתוח תוכנה לרכב אוטומוני"
-      break;
-    case "tihnutInternet":
-      name="קורס תכנות בסביבת אינטרנט"
-      break;
+      case "internetSecurityTirgul":
+      name="אבטחת רשתות תרגול"
+      break; 
     case "ml":
       name="למידת מכונה-הרצאה"
       break; 
       case "mlTirgul":
       name="למידת מכונה-תרגול"
       break; 
+    
   }
   var accept=confirm("האם אתה בטוח שאתה רוצה להכניס רשומה חדשה אל תוך "+name);
   if (accept==true){
@@ -476,89 +470,12 @@ function Push(){
     })
       setTimeout(() => {  location.reload(); }, 2500);
         
-    //location.reload();
   }
   
       
 }
 
 
-// auth.onAuthStateChanged(user => {
-//   if (user){
-//     loginForm.style.display="none"
-//     dataUI.style.display="block"
-//     //loggedOut.style.display="block"
-//     //setupUI(user);
-    
-    
-//   }
-//   else{
-//     loginForm.style.display="block"
-//     dataUI.style.display="block"
-//     // console.log(loggedOut)
-//     //\\loggedOut.style.display="none"
-//     //setupUI();
-//   }
-// })
-
-
-
-
-// const logTo=document.querySelector('#loginAdmin');//Navbar logout ID
-//   logTo.addEventListener('click',(e)=>{
-//     e.preventDefault();
-    
-//     Swal.fire({
-//       title: 'התחברות לממשק ניהול',
-//       html: `<input type="text" id="login" class="swal2-input" placeholder="Username">
-//       <input type="password" id="password" class="swal2-input" placeholder="Password">`,
-//       confirmButtonText: 'Sign in',
-//       focusConfirm: false,
-//       preConfirm: () => {
-//         const login = Swal.getPopup().querySelector('#login').value
-//         const password = Swal.getPopup().querySelector('#password').value
-//         if (!login || !password) {
-//           Swal.showValidationMessage(`Please enter login and password`)
-//         }
-//         try{
-//           auth.signInWithEmailAndPassword(login,password).then((cred) => {
-//             console.log("success")
-//             console.log(cred.user)
-           
-            
-//             // const Toast = Swal.mixin({
-//             //   toast: true,
-//             //   position: 'top-end',
-//             //   showConfirmButton: false,
-//             //   timer: 2000,
-//             //   timerProgressBar: true,
-              
-//             // })
-            
-            
-//           }).catch(err=>{
-//             e.preventDefault();
-//             console.log(err)
-//             Swal.fire({
-//               title: '!שימו לב',
-//               text: 'שם משתמש או סיסמה לא נכונים',
-//               icon: 'error',
-//               confirmButtonText: 'אישור'
-//             })
-//           })
-
-//         }
-//         catch(err){
-//           //console.log(err)
-//           console.log("xxddddddd")
-
-//         }
-        
-
-//         return { login: login, password: password }
-//       }
-//     })
-//   });
 
 
 

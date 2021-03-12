@@ -20,50 +20,48 @@
     
     <link rel="stylesheet" href="course.css">
 
-    <title>למידת מכונה</title>
+    <title>אבטחת רשתות</title>
 </head>
 <body dir="rtl">
-
-
-   
-   
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark" id="nav1">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup" >
-      <div class="navbar-nav">
-        <a class="nav-item nav-link active" href="../index.html" style="float:right">דף הבית <span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link" href="../index.html#courses" tyle="float:right">אינדקס סרטונים</a>
-        <a class="nav-item nav-link" href="../admin.html" style="float:right">ניהול</a>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            קורסים
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="./complexity.html">חישוביות וסיבוכיות</a>
-            <a class="dropdown-item" href="./ml.html">למידת מכונה</a>
-            <a class="dropdown-item" href="./devops.html">דבאופס</a>
-            <a class="dropdown-item" href="./internetSecurity.html">אבטחת רשתות</a>
-            
-           
+    <!-- NavBar -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark" id="nav1">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup" >
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="../index.html" style="float:right">דף הבית <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="../index.html#courses" tyle="float:right">אינדקס סרטונים</a>
+            <a class="nav-item nav-link" href="../admin.html" style="float:right">ניהול</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                קורסים
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="./complexity.html">חישוביות וסיבוכיות</a>
+                <a class="dropdown-item" href="./ml.html">למידת מכונה</a>
+                <a class="dropdown-item" href="./devops.html">דבאופס</a>
+                <a class="dropdown-item" href="./internetSecurity.html">אבטחת רשתות</a>
+                
+               
+              </div>
+            </li>
           </div>
-        </li>
-      </div>
-    </div>
-</nav>
-<div class="container">
-  <div class="row text-center  justify-content-md-center">
-    <div class="col">
-      <h1 class="text-center mt-5 name" style="color: azure;">קורס למידת מכונה</h1>
-          
-          <div class="alert alert-secondary" role="alert">
-            <a class="btn btn-light btn-lg " href="../index.html#courses">חזרה לקורסים</a>
-            יש לכם רעיונות לשיפור/דברים להוסיף ? שתפו אותי! mboyar54@gmail.com
+        </div>
+    </nav>
+      <div class="container">
+        <div class="row text-center  justify-content-md-center">
+          <div class="col">
+            <h1 class="text-center mt-5 name" id="nameOfCourse" style="color: azure;"></h1>
+                
+                <div class="alert alert-secondary" role="alert">
+                  <a class="btn btn-light btn-lg " href="../index.html#courses">חזרה לקורסים</a>
+                <!-- <a class="btn btn-info btn-lg " href="https://drive.google.com/drive/folders/1J4bAO6eaPa2N0pAwRqcn3BsfrCmDct6E">סיכומים</a> -->
+                  יש לכם רעיונות לשיפור/דברים להוסיף ? שתפו אותי! mboyar54@gmail.com
+                </div>
           </div>
-    </div>
-  </div>
-</div>    
+        </div>
+      </div>    
    
 
 
@@ -130,6 +128,21 @@
 <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-database.js"></script>
 <script>
+
+
+////////////Course configuration////////////////
+//DB child name
+var course="internetSecurity"
+var courseTirgul="internetSecurityTirgul"
+//name of course <h1>
+var nameOfCourse="אבטחת רשתות"
+////////////Course configuration////////////////
+
+
+
+
+
+//Firebase cobfiguration    
 var firebaseConfig = {
   apiKey: "AIzaSyD2EtDid4bv498Z58hnan7rYjEZ3bdJuaU",
   authDomain: "hitzoom.firebaseapp.com",
@@ -142,18 +155,22 @@ var firebaseConfig = {
 };
 firebase.initializeApp(firebaseConfig);
 
+
+
+document.getElementById("nameOfCourse").innerHTML = nameOfCourse;
+
+
+//Fetch Data
 function getData(){
-        
-        firebase.database().ref().child("ml").once('value',function(snapshot){
+        //Fetch lectures
+        firebase.database().ref().child(course).once('value',function(snapshot){
             
             snapshot.forEach(function(childSnapshot)
             {
                 var childData=childSnapshot.val();
-                
-                
                 var color=childData.subject;
                 var number=color.match(/\d+/)[0];
-                
+                //Color rows
                 if(number%2==0){
                   var table= document.querySelector(".firstTable")
                   var row=`<tr class="table-dark">
@@ -191,14 +208,12 @@ function getData(){
             myobj.remove();
             
         })
-
-        firebase.database().ref().child("mlTirgul").once('value',function(snapshot){
+        //Fetch tirgul
+        firebase.database().ref().child(courseTirgul).once('value',function(snapshot){
             
             snapshot.forEach(function(childSnapshot)
             {
                 var childData=childSnapshot.val();
-                
-
                 var table= document.querySelector(".secondTable")
                 var row=`<tr >
                         <th scope="row">-</th>

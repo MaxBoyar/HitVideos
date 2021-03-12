@@ -38,11 +38,10 @@
 
     <title>HIT Zoom videos</title>
 </head>
+
+<!-- NavBar -->
 <body dir="rtl" data-spy="scroll" data-target="#navbarNavAltMarkup">
-
-
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark" id="nav1">
-        
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark" id="nav1">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -58,12 +57,15 @@
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="./courses/complexity.html">חישוביות וסיבוכיות</a>
                 <a class="dropdown-item" href="./courses/ml.html">למידת מכונה</a>
+                <a class="dropdown-item" href="./courses/devops.html">דבאופס</a>
+                <a class="dropdown-item" href="./courses/internetSecurity.html">אבטחת רשתות</a>
+                
                
               </div>
             </li>
           </div>
         </div>
-      </nav>
+  </nav>
 
     <div class="landing">
         <div class="home-wrap">
@@ -118,8 +120,31 @@
                         <!-- <a href="#" class="btn btn-primary">מעבר לקורס</a> -->
                       </div>
                     </div>
-
-              </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">אבטחת רשתות</h5>
+                        <!-- <p>עם המרצה פרדימן משה</p> -->
+                        <p>2021-סמסטר ב</p>
+                        <a href="./courses/internetSecurity.html" class="btn btn-outline-primary">מעבר לקורס</a>
+                        
+                        <!-- <a href="#" class="btn btn-primary">מעבר לקורס</a> -->
+                      </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Devops</h5>
+                        <!-- <p>עם המרצה פרדימן משה</p> -->
+                        <p>2021-סמסטר ב</p>
+                        <a href="./courses/devops.html" class="btn btn-outline-primary">מעבר לקורס</a>
+                        
+                        <!-- <a href="#" class="btn btn-primary">מעבר לקורס</a> -->
+                      </div>
+                    </div>
+                </div>
                 
               
                 
@@ -179,7 +204,7 @@
             <hr>
             <p>רוצים לעזור ולתרום לתחזוקת האתר צרו קשר</p>
             <hr>
-            <h5>CONTACT US</h5>
+            <h5>CONTACT ME</h5>
          
             
             <i class="far fa-envelope fa-2x"></i>
@@ -195,76 +220,6 @@
    
 
 <script>
-//   var firebaseConfig = {
-//   apiKey: "AIzaSyD2EtDid4bv498Z58hnan7rYjEZ3bdJuaU",
-//   authDomain: "hitzoom.firebaseapp.com",
-//   databaseURL: "https://hitzoom.firebaseio.com",
-//   projectId: "hitzoom",
-//   storageBucket: "hitzoom.appspot.com",
-//   messagingSenderId: "618359006692",
-//   appId: "1:618359006692:web:6ab2d27e3a275b28a793f1",
-//   measurementId: "G-JP1NSJFDKY"
-// };
-// firebase.initializeApp(firebaseConfig);
-// var auth = firebase.auth();
-
-
-// const logTo=document.querySelector('#loginAdmin');//Navbar logout ID
-//   logTo.addEventListener('click',(e)=>{
-//     e.preventDefault();
-    
-//     Swal.fire({
-//       title: 'התחברות לממשק ניהול',
-//       html: `<input type="text" id="login" class="swal2-input" placeholder="Username">
-//       <input type="password" id="password" class="swal2-input" placeholder="Password">`,
-//       confirmButtonText: 'Sign in',
-//       focusConfirm: false,
-//       preConfirm: () => {
-//         const login = Swal.getPopup().querySelector('#login').value
-//         const password = Swal.getPopup().querySelector('#password').value
-//         if (!login || !password) {
-//           Swal.showValidationMessage(`Please enter login and password`)
-//         }
-//         try{
-//           auth.signInWithEmailAndPassword(login,password).then((cred) => {
-//             console.log("success")
-//             console.log(cred.user)
-           
-            
-//             // const Toast = Swal.mixin({
-//             //   toast: true,
-//             //   position: 'top-end',
-//             //   showConfirmButton: false,
-//             //   timer: 2000,
-//             //   timerProgressBar: true,
-              
-//             // })
-            
-            
-//           }).catch(err=>{
-//             e.preventDefault();
-//             console.log(err)
-//             Swal.fire({
-//               title: '!שימו לב',
-//               text: 'שם משתמש או סיסמה לא נכונים',
-//               icon: 'error',
-//               confirmButtonText: 'אישור'
-//             })
-//           })
-
-//         }
-//         catch(err){
-//           //console.log(err)
-//           console.log("xxddddddd")
-
-//         }
-        
-
-//         return { login: login, password: password }
-//       }
-//     })
-//   });
-
 
 
 </script>
