@@ -1,5 +1,6 @@
 html body{ 
-    background: url('https://images.pexels.com/photos/775201/pexels-photo-775201.jpeg?cs=srgb&dl=pexels-kaique-rocha-775201.jpg&fm=jpg') no-repeat center center fixed; 
+    /* background: url('https://images.pexels.com/photos/775201/pexels-photo-775201.jpeg?cs=srgb&dl=pexels-kaique-rocha-775201.jpg&fm=jpg') no-repeat center center fixed;  */
+    background: url('https://images.pexels.com/photos/2868441/pexels-photo-2868441.jpeg?cs=srgb&dl=pexels-jackson-david-2868441.jpg&fm=jpg') no-repeat center center fixed; 
     
   
    
@@ -16,14 +17,18 @@ html body{
      filter:(opacity=50) !important;  
      background: rgb(7, 7, 7)!important;     
  }
-.tableOfMovies{
-   margin-top: 30vh;
-   opacity: 0.9;
-   text-align: center;
+.btn:hover
+{
+    transform: scale(1.2);
+}
+
+.fa-video:hover
+{
+    transform: scale(1.4);
 }
 
 .firstTable{
-    margin-top: 10vh;
+   margin-top: 3vh;
    opacity: 0.9;
    text-align: center;
 
