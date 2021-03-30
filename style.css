@@ -10,14 +10,8 @@
 
 .inner-html{
     height: 75vh;
-    /* height: 95vh; */
-   
     background: url('https://images.pexels.com/photos/399161/pexels-photo-399161.jpeg?cs=srgb&dl=pexels-lumn-399161.jpg&fm=jpg') no-repeat center center fixed; 
-    /* background: url('https://images.pexels.com/photos/4145190/pexels-photo-4145190.jpeg?cs=srgb&dl=pexels-julia-m-cameron-4145190.jpg&fm=jpg') no-repeat center center fixed;  */
-    
-  
-   
-   -webkit-background-size: cover;
+    -webkit-background-size: cover;
    -moz-background-size: cover;
    -o-background-size: cover;
    background-size: cover;
@@ -26,18 +20,13 @@
 @media only screen and (max-width: 600px) {
     .inner-html{
         height: 95vh;
-        /* height: 95vh; */
-       
         background: url('https://images.pexels.com/photos/4050315/pexels-photo-4050315.jpeg?cs=srgb&dl=pexels-vlada-karpovich-4050315.jpg&fm=jpg') no-repeat center center fixed; 
-        /* background: url('https://images.pexels.com/photos/3618162/pexels-photo-3618162.jpeg?cs=srgb&dl=pexels-lukas-rodriguez-3618162.jpg&fm=jpg') no-repeat center center fixed;  */
-        
-      
-       
+        min-width: 100%;
+        min-height: 100%;
        -webkit-background-size: cover;
        -moz-background-size: cover;
        -o-background-size: cover;
        background-size: cover;
-     
     }
   }
 
