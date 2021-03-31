@@ -44,3 +44,17 @@ html body{
     text-shadow: .1rem .1rem .8rem black;
 }
 
+@media (max-width: 767.98px) { 
+    .firstTable th,
+    .firstTable td {
+        padding: 2vh !important;
+     }
+     .secondTable th,
+    .secondTable td {
+        padding: 2vh !important;
+     }
+   }
+
+.btn{
+    margin-left: 4vh;
+}
